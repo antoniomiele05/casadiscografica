@@ -43,4 +43,7 @@ public class Disco {
 
 	@Column 
 	private Double prezzo;
+	
+	@Column 
+	private String numeroSerie;
 }
