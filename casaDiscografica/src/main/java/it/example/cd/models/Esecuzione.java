@@ -1,6 +1,5 @@
 package it.example.cd.models;
 
-import java.sql.Date;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -34,7 +33,7 @@ public class Esecuzione {
 	private String titolo;
 
 	@Column 
-	private Date annoDiRegistrazione;
+	private Integer annoDiRegistrazione;
 	
 	@ManyToOne
 	@JoinColumn(name = "id_artista")

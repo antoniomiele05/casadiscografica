@@ -1,6 +1,5 @@
 package it.example.cd.models;
 
-import java.sql.Date;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -39,7 +38,7 @@ public class Disco {
 	private String titoloDisco;
 
 	@Column 
-	private Date annoUscitaAlbum;
+	private Integer annoUscitaAlbum;
 
 	@Column 
 	private Double prezzo;
