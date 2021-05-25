@@ -28,6 +28,9 @@ public class Artista {
 	@Column
 	private Boolean cantante;
 	
+	@Column
+	private String nomedArte;
+	
 	@OneToOne
 	@JoinColumn(name = "id_persona", referencedColumnName="id")
 	private Persona persona;
