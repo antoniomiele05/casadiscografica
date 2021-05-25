@@ -37,7 +37,7 @@ public class Esecuzione {
 	private Date annoDiRegistrazione;
 	
 	@ManyToOne
-	//@JoinColumn(name = "id_esecuzione")
+	@JoinColumn(name = "id_artista")
 	private Artista artista;	
 
 	@ManyToMany(mappedBy="esecuzioni")
