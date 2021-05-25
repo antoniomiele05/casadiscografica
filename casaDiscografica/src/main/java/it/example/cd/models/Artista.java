@@ -34,5 +34,6 @@ public class Artista {
 	@OneToOne
 	@JoinColumn(name = "id_persona", referencedColumnName="id")
 	private Persona persona;
+	//One
 
 }
