@@ -43,6 +43,6 @@ public class Disco {
 	@Column 
 	private Double prezzo;
 	
-	@Column 
+	@Column (length = 3, unique = true)
 	private String numeroSerie;
 }

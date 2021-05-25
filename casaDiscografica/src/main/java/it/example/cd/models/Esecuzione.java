@@ -29,7 +29,7 @@ public class Esecuzione {
 	private Integer id;
 
 
-	@Column 
+	@Column(nullable = false)
 	private String titolo;
 
 	@Column 
