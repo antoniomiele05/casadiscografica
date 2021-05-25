@@ -1,5 +1,8 @@
 package it.example.cd.services;
 
-public class EsecuzioneServiceImpl {
+import org.springframework.stereotype.Service;
+
+@Service
+public class EsecuzioneServiceImpl implements EsecuzioneService {
 
 }
