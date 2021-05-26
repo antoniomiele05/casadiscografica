@@ -15,6 +15,7 @@ public class ArtistaServiceImpl implements ArtistaService {
 	
 	@Autowired
 	PersonaRepository personaRepository;
+	
 
 	@Override
 	public List<PersonaDTO> getAutorieCantantiPuri() {
@@ -27,6 +28,18 @@ public class ArtistaServiceImpl implements ArtistaService {
 			autoriOrCantanti.add(personaDTO);
 		}
 		return autoriOrCantanti;
+	}
+	
+	
+	@Override
+	public List<PersonaDTO> getautoriNonHannoMaiCantato() {
+		List <Persona> persona = personaRepository.findautoriNonHannoMaiCantato();
+		List <PersonaDTO> risultato = new LinkedList<PersonaDTO>();
+		for (Persona p : persona) {
+			PersonaDTO personaDTO = new PersonaDTO(p.getNome(),p.getCognome());
+			risultato.add(personaDTO);
+		}
+		return risultato;
 	}
 	
 

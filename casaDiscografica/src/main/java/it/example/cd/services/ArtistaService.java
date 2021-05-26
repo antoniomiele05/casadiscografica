@@ -8,5 +8,6 @@ import it.example.cd.models.Artista;
 public interface ArtistaService {
 	
 	List<PersonaDTO> getAutorieCantantiPuri();
+	List<PersonaDTO> getautoriNonHannoMaiCantato();
 
 }
