@@ -6,10 +6,17 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import it.example.cd.dto.ContieneDTO;
 import it.example.cd.models.Disco;
 
 @Repository
 public interface DiscoRepository extends JpaRepository<Disco, Integer> {
+	
+	@Query("SELECT new it.example.cd.dto.ContieneDTO ( d.id AS numeroSerieAlbum, d.esecuzioni.size as numerobrani)\r\n"
+			+ "FROM Disco d \r\n"
+			+ "GROUP BY d.id "
+			+ "ORDER BY numerobrani DESC")
+	List<ContieneDTO> findAutoriECantantiPuri();
 
 	@Query(value= "SELECT distinct d.*" + 
 			" FROM disco d, esecuzione e, contiene c" + 
@@ -27,5 +34,8 @@ public interface DiscoRepository extends JpaRepository<Disco, Integer> {
 			+ "where e.annoDiRegistrazione = null")
 	List<Disco> findDischi();
 	*/
+	
+	
+
 
 }
