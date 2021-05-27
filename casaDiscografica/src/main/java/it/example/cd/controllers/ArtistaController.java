@@ -27,5 +27,10 @@ public class ArtistaController {
 	public List<PersonaDTO> autoriNonHannoMaiCantato(){
 		return artistaService.getautoriNonHannoMaiCantato();
 	}
+	
+	@GetMapping("/cantautoriNomePerD")
+	public List<PersonaDTO> cantautoriNomePerD(){
+		return artistaService.getCantautoriNomePerD();
+	}
 
 }

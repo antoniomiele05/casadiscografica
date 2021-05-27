@@ -21,4 +21,7 @@ public interface PersonaRepository extends JpaRepository<Persona, Integer> {
 			+ "AND a.cantante = false", nativeQuery = true)
 	List<Persona> findautoriNonHannoMaiCantato();
 
+	@Query(value = "SELECT p.* FROM persona p, artista a "
+			+ "WHERE a.id_persona = p.id AND p.nome LIKE 'D%' AND a.autore=true AND a.cantante=true", nativeQuery = true)
+	List<Persona> findCantautoriNomePerD();
 }

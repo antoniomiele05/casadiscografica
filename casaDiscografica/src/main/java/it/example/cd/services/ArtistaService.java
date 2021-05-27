@@ -9,5 +9,6 @@ public interface ArtistaService {
 	
 	List<PersonaDTO> getAutorieCantantiPuri();
 	List<PersonaDTO> getautoriNonHannoMaiCantato();
+	List<PersonaDTO> getCantautoriNomePerD();
 
 }

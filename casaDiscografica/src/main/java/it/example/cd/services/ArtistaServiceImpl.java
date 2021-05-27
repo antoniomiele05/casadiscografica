@@ -2,7 +2,6 @@ package it.example.cd.services;
 
 import java.util.LinkedList;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,6 +40,19 @@ public class ArtistaServiceImpl implements ArtistaService {
 		}
 		return risultato;
 	}
-	
+
+
+	@Override
+	public List<PersonaDTO> getCantautoriNomePerD() {
+		// TODO Auto-generated method stub
+		
+		List <Persona> persona = personaRepository.findCantautoriNomePerD();
+		List <PersonaDTO> risultato = new LinkedList<PersonaDTO>();
+		for (Persona p : persona) {
+			PersonaDTO personaDTO = new PersonaDTO(p.getNome(),p.getCognome());
+			risultato.add(personaDTO);
+		}
+		return risultato;
+	}
 
 }
