@@ -7,6 +7,7 @@ import it.example.cd.dto.DiscoDTO;
 
 public interface DiscoService {
 	List<DiscoDTO> getselectVisualizzaDischiStessoTitoloBrano();
+	List<DiscoDTO> findDischi();
 	
 
 }

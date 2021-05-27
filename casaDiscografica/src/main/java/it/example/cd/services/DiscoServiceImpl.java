@@ -25,8 +25,22 @@ public class DiscoServiceImpl implements DiscoService {
 		dischiDTO.add(discoDTO);
 		}
 	return dischiDTO;
+	}
+	
+	public List<DiscoDTO> findDischi(){
+		List<Disco> dischiConBraniSenzaAnno =discoRepository.findDischi();
+		List<DiscoDTO> risultato =new LinkedList<DiscoDTO>();
+		for (Disco i : dischiConBraniSenzaAnno) {
+			DiscoDTO discoDTO = new DiscoDTO(i.getTitoloDisco());
+			risultato.add(discoDTO);
+		}
+			
+		return risultato;
+	}
+//	ArtistaDTO artistaDTO = new ArtistaDTO(p.getNome(),p.getCognome());
+//	risultato.add(artistaDTO);
 		
 	
-	}
+	
 
 }

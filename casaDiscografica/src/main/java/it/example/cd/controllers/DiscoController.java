@@ -21,6 +21,14 @@ public class DiscoController {
 	public List<DiscoDTO> selectVisualizzaDischiStessoTitoloBrano(){
 		return discoService.getselectVisualizzaDischiStessoTitoloBrano();
 	}
+	
+	
+	@GetMapping("/FindDisco")
+	public List<DiscoDTO> findDischi(){
+		return discoService.findDischi();
+	}
+
+
 }
 
 
