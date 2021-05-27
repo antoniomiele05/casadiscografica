@@ -6,4 +6,5 @@ import it.example.cd.dto.EsecuzioneDTO;
 
 public interface EsecuzioneService {
 	List<EsecuzioneDTO> findDiscSerialNumbS01OrderedByEsecution();
+	List<EsecuzioneDTO> findVisualizzaBraniDaNumeroSerie();
 }

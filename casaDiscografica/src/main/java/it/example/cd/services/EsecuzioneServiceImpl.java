@@ -25,5 +25,14 @@ public class EsecuzioneServiceImpl implements EsecuzioneService {
 	return esecuzioniDTO;
 	
 	}
-
+	@Override
+	public List<EsecuzioneDTO> findVisualizzaBraniDaNumeroSerie() {
+		List<Esecuzione> esecuzioni = esecuzioneRepository.findVisualizzaBraniDaNumeroSerie();
+		List<EsecuzioneDTO> esecuzioniDTO = new LinkedList<EsecuzioneDTO>();
+	for (Esecuzione e : esecuzioni) {
+		EsecuzioneDTO esecuzioneDTO = new EsecuzioneDTO(e.getTitolo(), e.getAnnoDiRegistrazione());
+		esecuzioniDTO.add(esecuzioneDTO);
+		}
+	return esecuzioniDTO;
+	}
 	}

@@ -19,7 +19,11 @@ public class EsecuzioneController {
 	@GetMapping("/findDiscSerialNumbS01OrderedByEsecution")
 	public List<EsecuzioneDTO> findDiscSerialNumbS01OrderedByEsecution(){
 	return esecuzioneService.findDiscSerialNumbS01OrderedByEsecution();
-
 	}
+	@GetMapping("/findVisualizzaBraniDaNumeroSerie")
+	public List<EsecuzioneDTO> findVisualizzaBraniDaNumeroSerie(){
+		return esecuzioneService.findVisualizzaBraniDaNumeroSerie();
+	}
+	
 
 }

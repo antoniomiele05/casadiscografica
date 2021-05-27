@@ -8,8 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class EsecuzioneDTO {
-	
 	private String titoloBrano;
-	private Integer annoDiRegistrazione;
+	private int annoDiRegistrazione;
 
 }
