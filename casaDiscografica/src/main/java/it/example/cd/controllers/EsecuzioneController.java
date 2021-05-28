@@ -4,10 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import it.example.cd.dto.EsecuzioneDTO;
+import it.example.cd.dto.PersonaDTO;
 import it.example.cd.services.EsecuzioneService;
 
 @RestController
@@ -25,5 +28,9 @@ public class EsecuzioneController {
 		return esecuzioneService.findVisualizzaBraniDaNumeroSerie();
 	}
 	
+	@GetMapping("/cercaCoautori/{titolo}/{idArtista}")
+	public List<PersonaDTO> cercaCoautori(@PathVariable String titolo, @PathVariable Integer idArtista){
+		return esecuzioneService.getCercaCoautori(titolo,idArtista);
+	}
 
 }
