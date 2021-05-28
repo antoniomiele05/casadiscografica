@@ -19,7 +19,7 @@ public class ContieneServiceImpl implements ContieneService {
 	public List<ContieneDTO> getNumeroSerieAlbumConNumeroBrani() {
 		// TODO Auto-generated method stub
 		
-		List<ContieneDTO> contieneDTO = discoRepository.findAutoriECantantiPuri();
+		List<ContieneDTO> contieneDTO = discoRepository.findNumeroSerieAlbumConNumeroBrani();
 		
 		return contieneDTO;
 	}

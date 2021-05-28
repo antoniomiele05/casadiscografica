@@ -12,11 +12,11 @@ import it.example.cd.models.Disco;
 @Repository
 public interface DiscoRepository extends JpaRepository<Disco, Integer> {
 	
-	@Query("SELECT new it.example.cd.dto.ContieneDTO ( d.id AS numeroSerieAlbum, d.esecuzioni.size as numerobrani)\r\n"
+	@Query("SELECT new it.example.cd.dto.ContieneDTO ( d.id, d.esecuzioni.size as numerobrani, d.numeroSerie as numeroserie)\r\n"
 			+ "FROM Disco d \r\n"
 			+ "GROUP BY d.id "
 			+ "ORDER BY numerobrani DESC")
-	List<ContieneDTO> findAutoriECantantiPuri();
+	List<ContieneDTO> findNumeroSerieAlbumConNumeroBrani();
 
 	@Query(value= "SELECT distinct d.*" + 
 			" FROM disco d, esecuzione e, contiene c" + 

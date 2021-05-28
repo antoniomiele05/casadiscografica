@@ -20,7 +20,7 @@ public class ContieneController {
 	private ContieneService contieneService;
 	
 	@GetMapping("/getNumeroSerieAlbumConNumeroBrani")
-	public List<ContieneDTO> autorieCantantiPuri(){
+	public List<ContieneDTO> numeroSerieAlbumConNumeroBrani(){
 		
 		return contieneService.getNumeroSerieAlbumConNumeroBrani();
 	}
