@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ContieneDTO {
 	
-	private Integer numeroDisco;
+	private Integer id;
 	private Integer numeroBrani;
+	private String numeroSerie;//
 
 }

@@ -24,7 +24,7 @@ public class EsecuzioneServiceImpl implements EsecuzioneService {
 		List<Esecuzione> esecuzioni = esecuzioneRepository.findDiscSerialNumbS01OrderedByEsecution();
 		List<EsecuzioneDTO> esecuzioniDTO = new LinkedList<EsecuzioneDTO>();
 	for (Esecuzione e : esecuzioni) {
-		EsecuzioneDTO esecuzioneDTO = new EsecuzioneDTO(e.getTitolo(),e.getAnnoDiRegistrazione());
+		EsecuzioneDTO esecuzioneDTO = new EsecuzioneDTO(e.getTitolo(), e.getAnnoDiRegistrazione());
 		esecuzioniDTO.add(esecuzioneDTO);
 		}
 	return esecuzioniDTO;
