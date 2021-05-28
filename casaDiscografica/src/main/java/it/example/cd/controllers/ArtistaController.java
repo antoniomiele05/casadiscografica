@@ -17,17 +17,19 @@ public class ArtistaController {
 	@Autowired
 	private ArtistaService artistaService;
 	
+	//US 7
 	@GetMapping("/getAutoriCantantiPuri")
-	public List<PersonaDTO> autorieCantantiPuri(){
-		
+	public List<PersonaDTO> autorieCantantiPuri(){		
 		return artistaService.getAutorieCantantiPuri();
 	}
 	
+	//US 6
 	@GetMapping("/autoriNonHannoMaiCantato")
 	public List<PersonaDTO> autoriNonHannoMaiCantato(){
 		return artistaService.getautoriNonHannoMaiCantato();
 	}
 	
+	//US 3
 	@GetMapping("/cantautoriNomePerD")
 	public List<PersonaDTO> cantautoriNomePerD(){
 		return artistaService.getCantautoriNomePerD();

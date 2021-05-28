@@ -17,12 +17,13 @@ public class DiscoController {
 	@Autowired
 	DiscoService discoService;
 
+	//US 5
 	@GetMapping("/selectVisualizzaDischiStessoTitoloBrano")
 	public List<DiscoDTO> selectVisualizzaDischiStessoTitoloBrano(){
 		return discoService.getselectVisualizzaDischiStessoTitoloBrano();
 	}
 
-
+    // US 4
 	@GetMapping("/FindDisco")
 	public List<DiscoDTO> findDischi(){
 		return discoService.findDischi();

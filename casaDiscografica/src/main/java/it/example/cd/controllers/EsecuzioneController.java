@@ -19,15 +19,19 @@ public class EsecuzioneController {
 	@Autowired 
 	EsecuzioneService esecuzioneService;
 	
+	// US 8
 	@GetMapping("/findDiscSerialNumbS01OrderedByEsecution")
 	public List<EsecuzioneDTO> findDiscSerialNumbS01OrderedByEsecution(){
 	return esecuzioneService.findDiscSerialNumbS01OrderedByEsecution();
 	}
+	
+	// US 9
 	@GetMapping("/findVisualizzaBraniDaNumeroSerie")
 	public List<EsecuzioneDTO> findVisualizzaBraniDaNumeroSerie(){
 		return esecuzioneService.findVisualizzaBraniDaNumeroSerie();
 	}
 	
+	//US 10
 	@GetMapping("/cercaCoautori/{titolo}/{idArtista}")
 	public List<PersonaDTO> cercaCoautori(@PathVariable String titolo, @PathVariable Integer idArtista){
 		return esecuzioneService.getCercaCoautori(titolo,idArtista);

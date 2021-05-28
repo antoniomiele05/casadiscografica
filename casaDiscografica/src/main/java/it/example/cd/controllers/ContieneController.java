@@ -19,9 +19,9 @@ public class ContieneController {
 	@Autowired
 	private ContieneService contieneService;
 	
+	//US 11
 	@GetMapping("/getNumeroSerieAlbumConNumeroBrani")
-	public List<ContieneDTO> numeroSerieAlbumConNumeroBrani(){
-		
+	public List<ContieneDTO> numeroSerieAlbumConNumeroBrani(){		
 		return contieneService.getNumeroSerieAlbumConNumeroBrani();
 	}
 
